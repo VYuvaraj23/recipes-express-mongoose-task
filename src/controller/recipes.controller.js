@@ -8,6 +8,8 @@ const getAllRecipes = async (req, res) => {
       .send({ message: "Data Fetch Successfully!", data: recipes });
   } catch (error) {
     res.status(500).send({ message: error.message || "Internal Server Error" });
+  } finally {
+    res.end();
   }
 };
 
@@ -25,6 +27,8 @@ const createRecipe = async (req, res) => {
     }
   } catch (error) {
     res.status(500).send({ message: error.message || "Internal Server Error" });
+  } finally {
+    res.end();
   }
 };
 
@@ -38,6 +42,8 @@ const getRecipeById = async (req, res) => {
     });
   } catch (error) {
     res.status(500).send({ message: error.message || "Internal Server Error" });
+  } finally {
+    res.end();
   }
 };
 
@@ -49,6 +55,8 @@ const updateRecipeByID = async (req, res) => {
     res.status(200).send({ message: "recipe updated successfully!" });
   } catch (error) {
     res.status(500).send({ message: error.message || "Internal Server Error" });
+  } finally {
+    res.end();
   }
 };
 
@@ -59,6 +67,8 @@ const deleteRecipeByID = async (req, res) => {
     res.status(200).send({ message: "Recipe Deleted Successfully!" });
   } catch (error) {
     res.status(500).send({ message: error.message || "Internal Server Error" });
+  } finally {
+    res.end();
   }
 };
 

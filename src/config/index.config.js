@@ -1,8 +1,8 @@
-import 'dotenv/config'
+import "dotenv/config";
 
 const config = {
   PORT: process.env.PORT || 8000,
-  MONGODB_URL:process.env.MONGODB_URL
-}
+  MONGODB_URL: process.env.MONGODB_URL,
+};
 
-export default config
+export default config;

@@ -8,6 +8,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(logger);
-app.use(routes)
+app.use(routes);
 
 app.listen(config.PORT, () => console.log(`Server Listening ${config.PORT}`));
